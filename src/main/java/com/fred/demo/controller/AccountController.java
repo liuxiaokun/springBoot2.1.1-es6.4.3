@@ -68,7 +68,7 @@ public class AccountController {
     @GetMapping("/update")
     public String update() {
 
-        Account account = accountDao.queryById("1");
+        Account account = accountDao.findById("1").orElseThrow(() -> new RuntimeException("不合法的参数"));
         account.setUser("Y.S.K 局部更新");
         accountDao.save(account);
 

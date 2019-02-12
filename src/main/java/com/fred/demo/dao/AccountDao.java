@@ -11,6 +11,4 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public interface AccountDao extends ElasticsearchRepository<Account,String> {
-
-    Account queryById(String id);
 }
